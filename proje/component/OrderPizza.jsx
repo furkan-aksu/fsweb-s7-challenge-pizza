@@ -122,7 +122,7 @@ export default function OrderPizza() {
             <p>Seçim Toplamı</p>
             <p>Toplam</p>
             <p>Toplam tl</p>
-            <Link>SİPARİŞ VER</Link>
+            <Link to="/Success">SİPARİŞ VER</Link>
           </div>
         </div>
       </div>
