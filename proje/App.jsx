@@ -1,8 +1,7 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import Success from "./component/Success";
-import Home from "./component/Home";
-import OrderPizza from "./component/OrderPizza";
+import { Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import OrderPizza from "./components/OrderPizza";
+import OrderSuccess from "./components/Success";
 
 function App() {
   return (
@@ -13,10 +12,11 @@ function App() {
       <Route exact path="/OrderPizza">
         <OrderPizza />
       </Route>
-      <Route exact path="/Success">
-        <Success />
+      <Route exact path="/OrderSuccess">
+        <OrderSuccess />
       </Route>
     </>
   );
 }
+
 export default App;

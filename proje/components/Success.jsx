@@ -7,8 +7,10 @@ export default function Success() {
           src="../../Assets/mile1-assets/logo.svg"
           alt="Teknolojik Yemekler"
         />
-        <p>TEBRİKLER!</p>
-        <P>SİPARİŞİNİZ ALINDI!</P>
+        <div>
+          <p>TEBRİKLER!</p>
+          <p>SİPARİŞİNİZ ALINDI!</p>
+        </div>
       </div>
     </>
   );
