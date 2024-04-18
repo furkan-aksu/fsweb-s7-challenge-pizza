@@ -11,7 +11,6 @@ const malzemeler = [
   "Mısır",
   "Sucuk",
   "Kanada Jambonu",
-  "Sucuk",
   "Ananas",
   "Tavuk Izgara",
   "Jalepeno",
@@ -19,6 +18,13 @@ const malzemeler = [
   "Soğan",
   "Sarımsak",
 ];
+
+const errorMessage = {
+  boyut: "Lütfen pizza boyutu seçiniz.",
+  hamur: "Lütfen hamur kalınlığını seçiniz.",
+  malzeme: "En az 4 malzeme seçmelisiniz.",
+  isim: "En az üç karakterli isim giriniz.",
+};
 
 function OrderPizza() {
   const [count, setCount] = useState(0);
@@ -152,7 +158,7 @@ function OrderPizza() {
             </div>
             <div className="malzeme-container">
               <p>Ek Malzemeler</p>
-              <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
+              <p>En Fazla 10 malzeme ,en az 4 malzeme seçebilirsiniz. 5₺</p>
               <Form>
                 {malzemeler.map((malzeme, index) => {
                   return (
@@ -162,6 +168,13 @@ function OrderPizza() {
                         onChange={onChangeSecimler}
                         value={malzeme}
                         key={index}
+                        disabled={
+                          secilenMalzemeler.includes(malzeme)
+                            ? false
+                            : secilenMalzemeler.length >= 10
+                            ? true
+                            : false
+                        }
                       />
                       <Label check>{malzeme}</Label>
                     </FormGroup>
