@@ -68,7 +68,7 @@ function OrderPizza() {
         : size == "Büyük"
         ? 125.5
         : 0;
-    //setSecimler(secilenMalzemeler.length*5);
+
     setTotal(sizeMoney * count + secimler * count);
   }, [secimler, size, count]);
 
@@ -76,7 +76,6 @@ function OrderPizza() {
     setSecimler(secilenMalzemeler.length * 5);
   }, [secilenMalzemeler]);
 
-  // useEffect( () => {  },[size])
   return (
     <>
       <div className="all">
